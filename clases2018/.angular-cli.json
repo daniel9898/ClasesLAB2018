@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "clases2018"
+    "name": "sala-de-juegos"
   },
   "apps": [
     {
@@ -19,9 +19,9 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "styles.css",
         "../node_modules/bootstrap/dist/css/bootstrap.css",
-        "../node_modules/font-awesome/css/font-awesome.css",
-        "styles.css"
+        "../node_modules/font-awesome/css/font-awesome.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",

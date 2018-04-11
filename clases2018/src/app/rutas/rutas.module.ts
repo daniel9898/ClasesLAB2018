@@ -4,12 +4,15 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 import { Clase2Component } from '../componentes/clase2/clase2.component';
+import { TestMaterialComponent } from '../componentes/test-material/test-material.component';
 
 // declaro donde quiero que se dirija
 const MiRuteo = [
 	
   {path: '' , component: Clase2Component},
 	{path: 'clase2' , component: Clase2Component},
+	{path: 'material' , component: TestMaterialComponent},
+
 
 	/*{path: '' , 
 	  children:
