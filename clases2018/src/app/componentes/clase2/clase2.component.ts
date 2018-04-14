@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Persona } from '../../clases/persona';
-
+import { EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-clase2',
@@ -9,13 +9,25 @@ import { Persona } from '../../clases/persona';
 })
 export class Clase2Component {
 
-   persona : Persona;
+   title = "TEXTO DESDE INPUT";
+
+   palabras = [];
   
    constructor(){
-     this.persona = new Persona();
+     //this.persona = new Persona();
    }
 
-   guardar(){
+   saludar($ev){
+     this.title = $ev;
+   }
+
+   guardarPalabra($event){
+    
+     this.palabras.push($event);
+     console.log("palabras : ",this.palabras);
+   }
+
+   /*guardar(){
        this.persona.guardar(); 
    }
 
@@ -25,6 +37,6 @@ export class Clase2Component {
      this.persona.apellido = persona.apellido;
      this.persona.mail = persona.mail;
      this.persona.check = persona.check;
-   }
+   }*/
 
 }

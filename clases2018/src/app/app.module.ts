@@ -16,14 +16,19 @@ import {
           MatToolbarModule,
           MatIconModule,
           MatCardModule 
+          
 } from '@angular/material';
+import { Clase3Component } from './componentes/clase3/clase3.component';
+import { ListaClase3Component } from './componentes/lista-clase3/lista-clase3.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     Clase2Component,
-    TestMaterialComponent
+    TestMaterialComponent,
+    Clase3Component,
+    ListaClase3Component
   ],
   imports: [
     BrowserModule,
