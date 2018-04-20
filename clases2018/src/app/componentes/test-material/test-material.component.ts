@@ -12,4 +12,8 @@ export class TestMaterialComponent implements OnInit {
   ngOnInit() {
   }
 
+  myMethod(){
+  	alert("funciona");
+  }
+
 }

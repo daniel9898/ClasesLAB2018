@@ -1,0 +1,63 @@
+
+<div class="container" [hidden]="submitted">
+  <form #personForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group row">
+      <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
+      <div class="col-sm-10">
+        <input type="text" [(ngModel)]="persona.nombre" class="form-control" #nombre="ngModel" name="nombre" placeholder="Nombre">
+        <div [hidden]="nombre.valid || nombre.pristine" class="alert alert-danger"> El nombre es requerido</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="Apellido" class="col-sm-2 col-form-label">Apellido</label>
+      <div class="col-sm-10">
+        <input type="text" [(ngModel)]="persona.apellido" class="form-control" name="Apellido" id="Apellido" #nombre="ngModel" placeholder="Apellido">
+        <div [hidden]="nombre.valid || nombre.pristine" class="alert alert-danger"> El apellido es requerido</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="email" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" [(ngModel)]="persona.mail" class="form-control" name="email" placeholder="Email">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2">Checkbox</label>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input [(ngModel)]="persona.check" class="form-check-input" name="check" type="checkbox"> Check me out
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="offset-sm-2 col-sm-10"><!--  guardar(); personForm.reset() -->
+        <button class="btn btn-success" (click)="guardar()">Guardar</button>
+        <!--<button type="submit" class="btn btn-primary">Sign in</button>
+        <button class="btn btn-info" (click)="traer($event)">traer</button>-->
+        {{diagnostic}}
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+<!--<div class="container">
+  <form>
+    <div class="form-group row">
+      <div class="offset-sm-2 col-sm-10">
+        <h4>Ingrese  :</h4>
+        <input type="text" [(ngModel)]="palabra" class="form-control" name="palabra" placeholder=".....">
+        <button class="btn btn-success" (click)="guardar()">guardar</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<h1>Hola input : {{dato}}</h1>-->

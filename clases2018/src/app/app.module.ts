@@ -5,9 +5,7 @@ import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 
 import { RutasModule } from './rutas/rutas.module';
-import { Clase2Component } from './componentes/clase2/clase2.component';
 import { TestMaterialComponent } from './componentes/test-material/test-material.component';
-
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';//test
 import { 
@@ -18,17 +16,21 @@ import {
           MatCardModule 
           
 } from '@angular/material';
-import { Clase3Component } from './componentes/clase3/clase3.component';
-import { ListaClase3Component } from './componentes/lista-clase3/lista-clase3.component';
+
+import { HomePersonaComponent } from './componentes/home-persona/home-persona.component';
+import { FormPersonaComponent } from './componentes/form-persona/form-persona.component';
+import { ListaPersonasComponent } from './componentes/lista-personas/lista-personas.component';
+import { LoginComponent } from './componentes/login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    Clase2Component,
     TestMaterialComponent,
-    Clase3Component,
-    ListaClase3Component
+    HomePersonaComponent,
+    FormPersonaComponent,
+    ListaPersonasComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
