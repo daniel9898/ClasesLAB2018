@@ -20,8 +20,11 @@ import {
 import { HomePersonaComponent } from './componentes/home-persona/home-persona.component';
 import { FormPersonaComponent } from './componentes/form-persona/form-persona.component';
 import { ListaPersonasComponent } from './componentes/lista-personas/lista-personas.component';
-import { LoginComponent } from './componentes/login/login.component';
+import { NgUploadComponent } from './componentes/ng-upload/ng-upload.component';
+//import { LoginComponent } from './componentes/login/login.component';
 
+import { FileUploadModule } from 'ng2-file-upload';
+import { Ng2CloudinaryModule } from 'ng2-cloudinary';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,8 @@ import { LoginComponent } from './componentes/login/login.component';
     HomePersonaComponent,
     FormPersonaComponent,
     ListaPersonasComponent,
-    LoginComponent
+    NgUploadComponent,
+    //LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,10 @@ import { LoginComponent } from './componentes/login/login.component';
     MatMenuModule,
     MatToolbarModule,
     MatIconModule,
-    MatCardModule 
+    MatCardModule,
+    FileUploadModule,
+    Ng2CloudinaryModule 
+    //CloudinaryModule.forRoot(cloudinary, config),
   ],
   providers: [],
   bootstrap: [AppComponent]
