@@ -10,23 +10,29 @@ import { Persona } from '../../clases/persona';
 })
 export class FormPersonaComponent {
 
-  persona : Persona;
+  person : any = {
+    name : '',
+    lastName: '',
+    email:'',
+    picture:''
+  };
+  
   submitted : boolean;
   
-  @Output() enviarPersona : EventEmitter<any> = new EventEmitter<any>();
+  //@Output() enviarPersona : EventEmitter<any> = new EventEmitter<any>();
 
   constructor() {
-    this.persona = new Persona();
+    //this.persona = new Persona();
     this.submitted = false;
   }
 
-  get diagnostic() { return JSON.stringify(this.persona); }
+  //get diagnostic() { return JSON.stringify(this.persona); }
 
-  onSubmit() { /*this.submitted = true;*/ }
+  //onSubmit() { /*this.submitted = true;*/ }
 
   guardar(){
-    this.enviarPersona.emit(this.persona);
-    console.log("persona enviada ",this.persona);
+    //this.enviarPersona.emit(this.persona);
+    console.log("persona enviada ",this.person);
   }
 
  
